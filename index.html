@@ -1,303 +1,152 @@
 <!DOCTYPE html>
 <html lang="tr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Neon Nexus OS | Hyper Dashboard</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@500;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <div class="background-layer"></div>
-    <div class="cat-silhouette cat-one"></div>
-    <div class="cat-silhouette cat-two"></div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>NOVA | All-in-One Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-    <div class="page-shell">
-      <header class="topbar glass-panel">
-        <div class="brand-block">
-          <div class="logo-mark">
-            <span class="logo-core"></span>
-            <span class="logo-ring"></span>
-          </div>
-          <div>
-            <p class="eyebrow">All-in-One Futuristic Platform</p>
-            <h1>Neon Nexus OS</h1>
-            <p class="subhead">Yayın, müzik, oyun, otomasyon ve AI tek merkezde.</p>
-          </div>
+<!-- Kedi silueti detayları (arka plan) -->
+<div class="cat-silhouette">
+    <svg viewBox="0 0 100 100"><path d="M30,70 L20,50 L30,30 L45,20 L60,30 L75,40 L80,60 L70,75 L55,80 L40,75 L30,70Z" fill="#FFA07A"/><circle cx="45" cy="45" r="3" fill="#FFF"/><circle cx="60" cy="45" r="3" fill="#FFF"/></svg>
+</div>
+<div class="cat-silhouette-2">
+    <svg viewBox="0 0 100 100"><path d="M20,60 L10,45 L18,28 L35,18 L52,25 L68,38 L70,55 L58,70 L42,72 L28,65 L20,60Z" fill="#FFB347"/></svg>
+</div>
+<div class="cat-silhouette-3">
+    <svg viewBox="0 0 100 100"><path d="M50,80 L38,68 L32,52 L40,35 L58,30 L74,42 L75,60 L64,73 L50,80Z" fill="#FF6B4A"/></svg>
+</div>
+
+<div class="dashboard">
+    <!-- HEADER -->
+    <div class="header">
+        <div class="logo">
+            <i class="fas fa-cube"></i>
+            <span>NOVA | ALL-IN-ONE</span>
         </div>
-
-        <label class="search-shell" aria-label="Platform search">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M10.5 4a6.5 6.5 0 1 0 4.02 11.61l4.43 4.44 1.41-1.42-4.44-4.43A6.5 6.5 0 0 0 10.5 4Zm0 2a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9Z" />
-          </svg>
-          <input id="global-search" type="search" placeholder="Yayın, oyun, modül, görev, sahne, komut ara..." />
-          <button id="pulse-search" type="button">Pulse Scan</button>
-        </label>
-
-        <div class="topbar-actions">
-          <button id="theme-toggle" class="ghost-btn" type="button">Glow+</button>
-          <button id="focus-mode" class="ghost-btn" type="button">Focus Mode</button>
+        <div class="search-wrapper">
+            <i class="fas fa-search search-icon"></i>
+            <input type="text" class="search-bar" placeholder="Ara: oyun, müzik, sinema..." id="globalSearch">
         </div>
-      </header>
-
-      <main class="dashboard-grid">
-        <section class="hero-panel glass-panel searchable" data-tags="live tv stream yayın video dashboard analytics focus">
-          <div class="section-heading">
-            <div>
-              <p class="eyebrow">Live TV Matrix</p>
-              <h2>Canlı yayın kapsülü</h2>
-            </div>
-            <div class="chip-row">
-              <span class="chip active">4K Feed</span>
-              <span class="chip">120 FPS</span>
-              <span class="chip">Spatial Audio</span>
-            </div>
-          </div>
-
-          <div class="broadcast-frame">
-            <div class="broadcast-overlay">
-              <span class="live-dot"></span>
-              <span>LIVE</span>
-              <span class="viewer-count" id="viewer-count">128.4K izleyici</span>
-            </div>
-            <div class="play-orb" id="play-toggle" aria-label="Toggle live stream">
-              <span></span>
-            </div>
-            <div class="waveform-bars" aria-hidden="true">
-              <span></span><span></span><span></span><span></span><span></span><span></span>
-            </div>
-            <div class="stream-meta">
-              <h3 id="stream-title">Cyber City Night Drive</h3>
-              <p id="stream-description">Neon şehir akışını gerçek zamanlı izleyin. Adaptif ışıklar ve panoramik sahneler eşliğinde yayın deneyimi.</p>
-            </div>
-          </div>
-
-          <div class="hero-bottom-grid">
-            <div class="stat-row">
-              <article>
-                <strong id="active-channel-count">09</strong>
-                <span>Aktif kanal</span>
-              </article>
-              <article>
-                <strong id="latency-indicator">22 ms</strong>
-                <span>Düşük gecikme</span>
-              </article>
-              <article>
-                <strong id="satisfaction-indicator">96%</strong>
-                <span>Memnuniyet</span>
-              </article>
-            </div>
-
-            <div class="mini-console glass-subpanel">
-              <div class="mini-console-head">
-                <span>Scene Router</span>
-                <span id="scene-status">Auto Mix</span>
-              </div>
-              <div class="scene-buttons">
-                <button class="ghost-btn scene-btn active" data-scene="night">Night Drive</button>
-                <button class="ghost-btn scene-btn" data-scene="arena">Arena Live</button>
-                <button class="ghost-btn scene-btn" data-scene="lounge">Lo-Fi Lounge</button>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <aside class="music-panel glass-panel searchable" data-tags="music player playlist lyrics şarkı sözü senkronizasyon equalizer favorites">
-          <div class="section-heading compact">
-            <div>
-              <p class="eyebrow">Dynamic Audio Dock</p>
-              <h2>Müzik çalar & lyrics sync</h2>
-            </div>
-            <div class="chip-row compact-row">
-              <button class="ghost-btn" id="shuffle-btn" type="button">Shuffle</button>
-              <button class="ghost-btn" id="favorite-track-btn" type="button">☆ Favorite</button>
-            </div>
-          </div>
-
-          <div class="player-card">
-            <div class="album-glow"></div>
-            <div>
-              <p class="player-status">Şimdi çalıyor</p>
-              <h3 id="track-title">Midnight Signal</h3>
-              <p id="track-artist">Astra Nova</p>
-              <div class="tag-line" id="track-tags">Synthwave • Night Run • Neon</div>
-            </div>
-            <div class="player-controls">
-              <button class="control-btn" id="prev-btn" type="button">⟨</button>
-              <button class="control-btn primary" id="play-btn" type="button">▶</button>
-              <button class="control-btn" id="next-btn" type="button">⟩</button>
-            </div>
-            <div class="progress-shell">
-              <div class="progress-bar"><span id="progress-bar"></span></div>
-              <div class="progress-meta"><span id="progress-current">01:24</span><span id="progress-total">03:48</span></div>
-            </div>
-          </div>
-
-          <div class="playlist-filters">
-            <button class="chip active playlist-filter" data-filter="all" type="button">Tümü</button>
-            <button class="chip playlist-filter" data-filter="boost" type="button">Boost</button>
-            <button class="chip playlist-filter" data-filter="calm" type="button">Calm</button>
-            <button class="chip playlist-filter" data-filter="favorite" type="button">Favorite</button>
-          </div>
-          <div class="playlist" id="playlist"></div>
-
-          <div class="lyrics-box">
-            <div class="lyrics-header">
-              <span>Synced Lyrics</span>
-              <span id="lyric-timestamp">00:12</span>
-            </div>
-            <div id="lyrics-lines" class="lyrics-lines"></div>
-          </div>
-        </aside>
-
-        <section class="command-panel glass-panel searchable" data-tags="quick actions command center automation widgets tools tasks">
-          <div class="section-heading compact">
-            <div>
-              <p class="eyebrow">Command Center</p>
-              <h2>Hızlı aksiyon modülleri</h2>
-            </div>
-            <span class="chip active" id="command-feedback">Hazır</span>
-          </div>
-
-          <div class="command-grid">
-            <button class="command-card" data-command="boost-audio">
-              <strong>Audio Boost</strong>
-              <span>Müzik panelini güçlendir ve ritmi arttır.</span>
-            </button>
-            <button class="command-card" data-command="cinema-mode">
-              <strong>Cinema Mode</strong>
-              <span>Canlı yayın kapsülünü vurgula.</span>
-            </button>
-            <button class="command-card" data-command="sync-lyrics">
-              <strong>Lyrics Sync</strong>
-              <span>Şarkı sözü akışını sıfırla.</span>
-            </button>
-            <button class="command-card" data-command="game-hype">
-              <strong>Game Hype</strong>
-              <span>Oyun vitrini metriklerini yükselt.</span>
-            </button>
-            <button class="command-card" data-command="focus-reset">
-              <strong>Reset View</strong>
-              <span>Tüm panelleri normal moda döndür.</span>
-            </button>
-            <button class="command-card" data-command="ai-brief">
-              <strong>AI Brief</strong>
-              <span>hnfak tarafından anlık özet üret.</span>
-            </button>
-          </div>
-        </section>
-
-        <section class="games-panel glass-panel searchable" data-tags="games oyun tanıtım featured launch trailer library missions">
-          <div class="section-heading compact">
-            <div>
-              <p class="eyebrow">Launch Bay</p>
-              <h2>Oyun tanıtım vitrini</h2>
-            </div>
-            <div class="chip-row compact-row">
-              <span class="chip active" id="game-rating">9.7 Meta Pulse</span>
-            </div>
-          </div>
-
-          <div class="game-card">
-            <div>
-              <span class="pill">NEW DROP</span>
-              <h3 id="game-title">Phantom Circuit: Zero Dawn</h3>
-              <p id="game-description">Holografik pistlerde yarış, taktik hack modları ve takım tabanlı boss baskınları ile yeni nesil aksiyon deneyimi.</p>
-              <div class="game-stats">
-                <span id="game-players">1.2M oyuncu</span>
-                <span id="game-events">12 global event</span>
-                <span id="game-bonus">+3 XP boost</span>
-              </div>
-            </div>
-            <div class="game-actions">
-              <button class="primary-cta" id="trailer-btn" type="button">Fragmanı İzle</button>
-              <button class="ghost-btn" id="wishlist-btn" type="button">Wishlist</button>
-            </div>
-          </div>
-        </section>
-
-        <section class="features-panel glass-panel searchable" data-tags="features tablo metrics ai automation security roadmap modules">
-          <div class="section-heading compact">
-            <div>
-              <p class="eyebrow">Core Stack</p>
-              <h2>Özellikler tablosu</h2>
-            </div>
-            <span class="chip">18 canlı modül</span>
-          </div>
-
-          <div class="table-wrap">
-            <table>
-              <thead>
-                <tr>
-                  <th>Modül</th>
-                  <th>Durum</th>
-                  <th>Gecikme</th>
-                  <th>Avantaj</th>
-                </tr>
-              </thead>
-              <tbody id="feature-table-body"></tbody>
-            </table>
-          </div>
-        </section>
-
-        <section class="automation-panel glass-panel searchable" data-tags="automation tasks to-do planner notes reminders productivity">
-          <div class="section-heading compact">
-            <div>
-              <p class="eyebrow">Automation Deck</p>
-              <h2>Görevler, notlar ve rutinler</h2>
-            </div>
-            <span class="chip active" id="task-counter">0 tamamlandı</span>
-          </div>
-
-          <form id="task-form" class="task-form">
-            <input id="task-input" type="text" placeholder="Yeni görev ekle..." autocomplete="off" />
-            <button type="submit">Ekle</button>
-          </form>
-          <div id="task-list" class="task-list"></div>
-          <div class="note-card glass-subpanel" id="routine-note">
-            <strong>Routine Suggestion</strong>
-            <p>Önce canlı yayını başlat, ardından boost playlist ve AI özet akışını aç.</p>
-          </div>
-        </section>
-
-        <section class="chatbot-panel glass-panel searchable" data-tags="hnfak ai chatbot assistant chat command briefing suggestions">
-          <div class="section-heading compact">
-            <div>
-              <p class="eyebrow">AI Concierge</p>
-              <h2>hnfak chatbot arayüzü</h2>
-            </div>
-            <span class="chip active">Online</span>
-          </div>
-
-          <div class="chat-window" id="chat-window">
-            <article class="message bot">
-              <span class="avatar">h</span>
-              <div>
-                <p class="message-author">hnfak</p>
-                <p>Merhaba! Yayın önerileri, şarkı geçişleri, görev planı, oyun keşfi ve platform rehberliği için hazırım.</p>
-              </div>
-            </article>
-          </div>
-
-          <div class="suggestion-row" id="suggestion-row">
-            <button class="chip suggestion-btn" type="button">Bugün ne izlemeliyim?</button>
-            <button class="chip suggestion-btn" type="button">Enerjik bir parça aç</button>
-            <button class="chip suggestion-btn" type="button">Dashboard özeti ver</button>
-          </div>
-
-          <form id="chat-form" class="chat-form">
-            <input id="chat-input" type="text" placeholder="hnfak ile konuşmaya başla..." autocomplete="off" />
-            <button type="submit">Gönder</button>
-          </form>
-        </section>
-      </main>
+        <div class="status-badge"><i class="fas fa-moon"></i> DARK•FUSION</div>
     </div>
 
-    <script src="script.js"></script>
-  </body>
+    <!-- ANA GRID: Canlı TV + Spotify Müzik -->
+    <div class="grid-2col">
+        <!-- CANLI TV YAYINI (Gerçek YouTube canlı yayın örneği) -->
+        <div class="glass-card live-tv">
+            <div class="card-header">
+                <i class="fas fa-tower-broadcast"></i> <span>CANLI TV YAYINI</span>
+                <span class="live-badge">LIVE</span>
+            </div>
+            <div class="embed-container">
+                <iframe src="https://www.youtube.com/embed/live_stream?channel=UC4R8DWoNaVfMgF9FqQe9VLA" 
+                        title="YouTube live stream" frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen></iframe>
+            </div>
+            <div class="tv-caption">🎥 Örnek canlı yayın (TRT Haber / değiştirebilirsiniz)</div>
+        </div>
+
+        <!-- GERÇEK SPOTIFY MÜZİK (embed) -->
+        <div class="glass-card spotify-card">
+            <div class="card-header">
+                <i class="fab fa-spotify"></i> <span>SPOTIFY • ÇALMA LİSTESİ</span>
+                <i class="fas fa-headphones"></i>
+            </div>
+            <div class="embed-container">
+                <iframe style="border-radius:12px" 
+                        src="https://open.spotify.com/embed/playlist/37i9dQZF1DXcBWIGoYBM5M?utm_source=generator" 
+                        width="100%" height="380" frameBorder="0" allowfullscreen="" 
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                        loading="lazy"></iframe>
+            </div>
+            <div class="spotify-note">🎧 Güncel pop listesi – istediğin başka bir listeyle değiştirebilirsin.</div>
+        </div>
+    </div>
+
+    <!-- SİNEMA BÖLÜMÜ -->
+    <div class="cinema-section glass-card">
+        <div class="card-header">
+            <i class="fas fa-film"></i> <span>SİNEMA • VİZYON & FRAGMANLAR</span>
+            <i class="fas fa-ticket-alt"></i>
+        </div>
+        <div class="cinema-grid">
+            <div class="movie-card">
+                <iframe src="https://www.youtube.com/embed/6ZfuNTqbHE8" title="Dune 2 fragman" frameborder="0" allowfullscreen></iframe>
+                <h4>Dune: Part Two</h4>
+                <p>Bilim kurgu efsanesi devam ediyor.</p>
+            </div>
+            <div class="movie-card">
+                <iframe src="https://www.youtube.com/embed/ERGgkgHjgqI" title="Furiosa fragman" frameborder="0" allowfullscreen></iframe>
+                <h4>Furiosa</h4>
+                <p>Mad Max evreninden aksiyon dolu bir öykü.</p>
+            </div>
+            <div class="movie-card">
+                <iframe src="https://www.youtube.com/embed/iMLzXW-l0G4" title="Deadpool 3 fragman" frameborder="0" allowfullscreen></iframe>
+                <h4>Deadpool & Wolverine</h4>
+                <p>Efsane ikili geri dönüyor.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ALT ALANLAR: MÜZİK ÇALAR (LYRICS) + OYUN TANITIM + ÖZELLİKLER + CHATBOT -->
+    <div class="bottom-grid">
+        <!-- Dinamik Müzik Çalar (şarkı sözü senkronizasyonu) -->
+        <div class="glass-card music-player-card">
+            <div class="card-header">
+                <i class="fas fa-music"></i> <span>DİNAMİK ÇALAR & LYRICS</span>
+            </div>
+            <div class="playlist-container" id="playlistContainer"></div>
+            <div class="lyrics-area">
+                <div class="lyrics-title">
+                    <span><i class="fas fa-microphone-alt"></i> ŞARKI SÖZLERİ</span>
+                    <button class="sync-btn" id="syncLyricsBtn">Senkronizasyon Başlat</button>
+                </div>
+                <div class="lyrics-text" id="lyricsText">Bir şarkı seçin, sözler burada akacak.</div>
+            </div>
+        </div>
+
+        <!-- OYUN TANITIM ALANI -->
+        <div class="glass-card game-card">
+            <h3><i class="fas fa-gamepad"></i> ÖNE ÇIKAN OYUN</h3>
+            <div class="game-banner">
+                <i class="fas fa-dragon" style="font-size: 2rem; color:#FF884D;"></i>
+                <p><strong>ELDEN RING: SHADOW OF THE ERDTREE</strong></p>
+                <span>Yeni genişleme paketi</span>
+            </div>
+            <p>Geniş dünya, zorlu boss'lar ve efsanevi hikaye. Sen de gölgelerin arasında savaşmaya hazır mısın?</p>
+            <button class="game-btn" id="gameDemoBtn"><i class="fab fa-youtube"></i> Fragman İzle</button>
+        </div>
+
+        <!-- ÖZELLİKLER TABLOSU + hnfak CHATBOT (birleşik alan) -->
+        <div class="glass-card features-chat">
+            <div class="features-section">
+                <h3><i class="fas fa-chart-line"></i> PLATFORM ÖZELLİKLERİ</h3>
+                <div class="feature-table">
+                    <div class="feature-row"><span><i class="fas fa-tachometer-alt"></i> Ultra Düşük Gecikme</span><span>&lt; 50ms</span></div>
+                    <div class="feature-row"><span><i class="fas fa-shield-alt"></i> Uçtan Uca Şifreleme</span><span>✅ Aktif</span></div>
+                    <div class="feature-row"><span><i class="fas fa-brain"></i> Yapay Zeka Asistanı</span><span>hnfak™</span></div>
+                    <div class="feature-row"><span><i class="fas fa-tv"></i> 4K Canlı Yayın</span><span>HDR10+</span></div>
+                </div>
+            </div>
+            <div class="chatbot-section">
+                <h3><i class="fas fa-comment-dots"></i> hnfak • AI Asistan</h3>
+                <div class="chat-messages" id="chatMessages">
+                    <div class="msg bot-msg"><div class="bubble">Merhaba! Ben hnfak, sana nasıl yardımcı olabilirim? 🚀</div></div>
+                </div>
+                <div class="chat-input-area">
+                    <input type="text" id="chatInput" placeholder="Bir şey sor...">
+                    <button id="sendChatBtn"><i class="fas fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
 </html>
