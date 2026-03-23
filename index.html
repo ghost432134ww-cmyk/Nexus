@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neon Nexus | All-in-One Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@500;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="background-layer"></div>
+    <div class="cat-silhouette cat-one"></div>
+    <div class="cat-silhouette cat-two"></div>
+
+    <div class="page-shell">
+      <header class="topbar glass-panel">
+        <div class="brand-block">
+          <div class="logo-mark">
+            <span class="logo-core"></span>
+            <span class="logo-ring"></span>
+          </div>
+          <div>
+            <p class="eyebrow">All-in-One Futuristic Platform</p>
+            <h1>Neon Nexus</h1>
+          </div>
+        </div>
+
+        <label class="search-shell" aria-label="Platform search">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M10.5 4a6.5 6.5 0 1 0 4.02 11.61l4.43 4.44 1.41-1.42-4.44-4.43A6.5 6.5 0 0 0 10.5 4Zm0 2a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9Z" />
+          </svg>
+          <input id="global-search" type="search" placeholder="Canlı yayınlar, oyunlar, parçalar ve AI modülleri ara..." />
+          <button id="pulse-search" type="button">Pulse Scan</button>
+        </label>
+      </header>
+
+      <main class="dashboard-grid">
+        <section class="hero-panel glass-panel searchable" data-tags="live tv stream yayın video dashboard">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Live TV Matrix</p>
+              <h2>Canlı yayın kapsülü</h2>
+            </div>
+            <div class="chip-row">
+              <span class="chip active">4K Feed</span>
+              <span class="chip">120 FPS</span>
+              <span class="chip">Spatial Audio</span>
+            </div>
+          </div>
+
+          <div class="broadcast-frame">
+            <div class="broadcast-overlay">
+              <span class="live-dot"></span>
+              <span>LIVE</span>
+              <span class="viewer-count">128.4K izleyici</span>
+            </div>
+            <div class="play-orb" id="play-toggle">
+              <span></span>
+            </div>
+            <div class="waveform-bars" aria-hidden="true">
+              <span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <div class="stream-meta">
+              <h3>Cyber City Night Drive</h3>
+              <p>Neon şehir akışını gerçek zamanlı izleyin. Adaptif ışıklar ve panoramik sahneler eşliğinde yayın deneyimi.</p>
+            </div>
+          </div>
+
+          <div class="stat-row">
+            <article>
+              <strong>09</strong>
+              <span>Aktif kanal</span>
+            </article>
+            <article>
+              <strong>22 ms</strong>
+              <span>Düşük gecikme</span>
+            </article>
+            <article>
+              <strong>96%</strong>
+              <span>Memnuniyet</span>
+            </article>
+          </div>
+        </section>
+
+        <aside class="music-panel glass-panel searchable" data-tags="music player playlist lyrics şarkı sözü senkronizasyon">
+          <div class="section-heading compact">
+            <div>
+              <p class="eyebrow">Dynamic Audio Dock</p>
+              <h2>Müzik çalar & lyrics sync</h2>
+            </div>
+            <button class="ghost-btn" id="shuffle-btn">Shuffle</button>
+          </div>
+
+          <div class="player-card">
+            <div class="album-glow"></div>
+            <div>
+              <p class="player-status">Şimdi çalıyor</p>
+              <h3 id="track-title">Midnight Signal</h3>
+              <p id="track-artist">Astra Nova</p>
+            </div>
+            <div class="player-controls">
+              <button class="control-btn" id="prev-btn">⟨</button>
+              <button class="control-btn primary" id="play-btn">▶</button>
+              <button class="control-btn" id="next-btn">⟩</button>
+            </div>
+            <div class="progress-shell">
+              <div class="progress-bar"><span id="progress-bar"></span></div>
+              <div class="progress-meta"><span id="progress-current">01:24</span><span id="progress-total">03:48</span></div>
+            </div>
+          </div>
+
+          <div class="playlist" id="playlist"></div>
+
+          <div class="lyrics-box">
+            <div class="lyrics-header">
+              <span>Synced Lyrics</span>
+              <span id="lyric-timestamp">00:12</span>
+            </div>
+            <div id="lyrics-lines" class="lyrics-lines"></div>
+          </div>
+        </aside>
+
+        <section class="games-panel glass-panel searchable" data-tags="games oyun tanıtım featured launch trailer">
+          <div class="section-heading compact">
+            <div>
+              <p class="eyebrow">Launch Bay</p>
+              <h2>Oyun tanıtım vitrini</h2>
+            </div>
+          </div>
+
+          <div class="game-card">
+            <div>
+              <span class="pill">NEW DROP</span>
+              <h3>Phantom Circuit: Zero Dawn</h3>
+              <p>Holografik pistlerde yarış, taktik hack modları ve takım tabanlı boss baskınları ile yeni nesil aksiyon deneyimi.</p>
+            </div>
+            <div class="game-actions">
+              <button class="primary-cta">Fragmanı İzle</button>
+              <button class="ghost-btn">Wishlist</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="features-panel glass-panel searchable" data-tags="features tablo metrics ai automation security">
+          <div class="section-heading compact">
+            <div>
+              <p class="eyebrow">Core Stack</p>
+              <h2>Özellikler tablosu</h2>
+            </div>
+          </div>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Modül</th>
+                  <th>Durum</th>
+                  <th>Gecikme</th>
+                  <th>Avantaj</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>LiveStream Engine</td>
+                  <td><span class="status online">Aktif</span></td>
+                  <td>22 ms</td>
+                  <td>Ultra düşük latency</td>
+                </tr>
+                <tr>
+                  <td>Audio Sync AI</td>
+                  <td><span class="status standby">Optimize</span></td>
+                  <td>08 ms</td>
+                  <td>Gerçek zamanlı lyrics</td>
+                </tr>
+                <tr>
+                  <td>Game Showcase Hub</td>
+                  <td><span class="status online">Aktif</span></td>
+                  <td>15 ms</td>
+                  <td>Etkileşimli launch kartları</td>
+                </tr>
+                <tr>
+                  <td>hnfak Assistant</td>
+                  <td><span class="status beta">Beta+</span></td>
+                  <td>41 ms</td>
+                  <td>Bağlamsal AI cevapları</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="chatbot-panel glass-panel searchable" data-tags="hnfak ai chatbot assistant chat">
+          <div class="section-heading compact">
+            <div>
+              <p class="eyebrow">AI Concierge</p>
+              <h2>hnfak chatbot arayüzü</h2>
+            </div>
+            <span class="chip active">Online</span>
+          </div>
+
+          <div class="chat-window" id="chat-window">
+            <article class="message bot">
+              <span class="avatar">h</span>
+              <div>
+                <p class="message-author">hnfak</p>
+                <p>Merhaba! Yayın önerileri, şarkı geçişleri, oyun keşfi ve platform içi rehberlik için hazırım.</p>
+              </div>
+            </article>
+          </div>
+
+          <form id="chat-form" class="chat-form">
+            <input id="chat-input" type="text" placeholder="hnfak ile konuşmaya başla..." autocomplete="off" />
+            <button type="submit">Gönder</button>
+          </form>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
